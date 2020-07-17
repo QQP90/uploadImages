@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://kindeditor.net/ke4/themes/default/default.css" />
+    <link rel="stylesheet" href="./css/jquery.date_input.pack.css">
+</head>
+</head>
+<body>
+    <input placeholder="日期" style="width:160px; line-height:23px;display:inline-block;margin-bottom: 30px;"
+                                        type="text" class="date_picker" id="datatimeo">
+    <textarea name="content" style="width:820px;height:350px;visibility:hidden;"></textarea>
+</body>
+</html>
+<script src="https://static.39.net/lib/jquery/core/jquery-1.12.4.min.js"></script>
+<script charset="utf-8" src="http://kindeditor.net/ke4/kindeditor-min.js"></script>
+<script charset="utf-8" src="http://kindeditor.net/ke4/lang/zh-CN.js"></script>
+<script src="./js/create_kindeditor.js"></script>
+<script src="./js/jquery.date_input.pack.js"></script>
+<script type="text/javascript">
+    $(function () {
+        // 日历选择
+        $('.date_picker').date_input();
+    })
+</script>
