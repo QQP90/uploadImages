@@ -1,0 +1,60 @@
+<style>
+    .inputBox {
+      width: 100px;
+      height: 50px;
+      background: green;
+      color: white;
+      font-size: 16px;
+      text-align: center;
+      line-height: 50px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+ 
+<body>
+  <form action="">
+ 
+    <label for='file' class='inputlabelBox'>
+ 
+        <img src="./images/cover.jpg" id="img" width="100" />
+ 
+    </label>
+ 
+    <input type="file" name="myfile" id='file' style="display:none;" />
+ 
+  </form>
+ 
+ 
+
+ 
+  <script>
+    var inputlabelBox = document.querySelector('.inputlabelBox');
+ 
+    var myfile = document.querySelector('#file');
+ 
+    var img = document.querySelector('#img');
+ 
+ 
+ 
+    myfile.onchange = function () {
+ 
+      var my_file = this.files[0];
+ 
+      console.log(file.files[0]);
+      console.log(file.files[0].name);
+ 
+      var reader = new FileReader();
+ 
+      reader.readAsDataURL(my_file);
+ 
+      reader.onload = function () {
+ 
+        console.log(this.result);
+        img.src = this.result;
+ 
+      }
+ 
+    }
+  </script>
+</body>
